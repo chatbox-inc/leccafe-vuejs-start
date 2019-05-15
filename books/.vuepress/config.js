@@ -1,5 +1,5 @@
 module.exports = {
-    title: 'Nuxt.js における REST API の活用',
+    title: 'Vue.js 実践活用講座',
     description: 'HTML/CSS を使った Web 制作技術について、現場で使えるテクニックを紹介します。',
     head: [
         ['script', { src: "https://static.codepen.io/assets/embed/ei.js"}]
