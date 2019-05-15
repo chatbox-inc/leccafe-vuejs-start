@@ -36,7 +36,7 @@ module.exports = {
           //   ]
           // },
         ],
-        repo: 'lec-cafe/book_nuxt_api_state',
+        repo: 'chatbox-inc/leccafe-start-vuejs',
         repoLabel: 'Github',
         docsDir: 'books',
         editLinks: true,
