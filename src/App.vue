@@ -1,33 +1,33 @@
 <template>
   <div id="app">
-    <!-- class, action, methodを変更しないでください -->
-    <form class="formrun" action="https://form.run/api/v1/r/aph5y6d7x77eyv8elilan46u" method="post">
-      <!-- ↓自由に要素を追加・編集することができます -->
-      <div>
-        <label>お名前</label>
-        <input name="お名前" type="text" v-model="form.name">
-      </div>
-
-      <div>
-        <label>メールアドレス [必須]</label>
-        <input name="メールアドレス" type="text" data-formrun-type="email" data-formrun-required>
-        <div data-formrun-show-if-error="メールアドレス">メールアドレスを正しく入力してください</div>
-      </div>
-
-      <div>
-        <label>お問い合わせ [必須]</label>
-        <textarea name="お問い合わせ" data-formrun-required></textarea>
-        <div data-formrun-show-if-error="お問い合わせ">お問い合わせ入力してください</div>
-      </div>
-
-      <div>
-        <label>個人情報利用同意 [必須]</label>
-        <input type="checkbox" name="個人情報利用同意" data-formrun-required>
-        <div data-formrun-show-if-error="個人情報利用同意">同意してください</div>
-      </div>
-
-      <button type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中..." @submit="submit">送信</button>
-    </form>
+    <div class="container mt-5">
+      <h1 class="h4 mb-5">お問い合わせフォーム</h1>
+      <form>
+        <div class="form-group">
+          <label>お名前</label>
+          <input type="text" class="form-control" name="name" v-model="form.name">
+          <p class="text-danger" v-if="error.name">お名前を入力して下さい</p>
+        </div>
+        <div class="form-group">
+          <label>メールアドレス</label>
+          <input type="email" class="form-control" name="name" v-model="form.email">
+          <p class="text-danger" v-if="error.email">Email アドレスを入力して下さい</p>
+        </div>
+        <div class="form-group">
+          <label>件名</label>
+          <input type="text" class="form-control" name="name" v-model="form.title">
+          <p class="text-danger" v-if="error.title">件名を入力して下さい</p>
+        </div>
+        <div class="form-group">
+          <label>本文</label>
+          <textarea class="form-control" name="body" rows="10" v-model="form.body" />
+          <p class="text-danger" v-if="error.body">本文を入力して下さい</p>
+        </div>
+        <div class="form-group">
+          <input type="submit" class="btn btn-block btn-success" value="送信" @click="submit">
+        </div>
+      </form>
+    </div>
   </div>
 </template>
 
@@ -36,20 +36,44 @@ export default {
   data(){
     return {
       form: {
-        name: ""
+        name: "",
+        email: "",
+        title: "",
+        body: ""
       },
       error: {
-        name: false
+        name: false,
+        email: false,
+        title: false,
+        body: false
       }
     }
   },
   methods: {
     submit(e) {
-      if(this.form.name.length == 0){
+      if(this.form.name.length == 0) {
         this.error.name = true
         e.preventDefault()
       }else{
         this.error.name = false
+      }
+      if(this.form.email.length == 0){
+        this.error.email = true
+        e.preventDefault()
+      }else{
+        this.error.email = false
+      }
+      if(this.form.title.length == 0){
+        this.error.title = true
+        e.preventDefault()
+      }else{
+        this.error.title = false
+      }
+      if(this.form.body.length == 0){
+        this.error.body = true
+        e.preventDefault()
+      }else{
+        this.error.body = false
       }
     }
   }
@@ -57,4 +81,7 @@ export default {
 </script>
 
 <style>
+  .container{
+    max-width: 480px;
+  }
 </style>
