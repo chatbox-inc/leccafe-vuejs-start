@@ -7,7 +7,8 @@ title: Vue.js 実践活用講座
 
 demo
 
-https://tender-panini-bbf6f6.netlify.com/
+https://xenodochial-bardeen-f34c4c.netlify.com/
+
 
 ## Contents
 
