@@ -56,4 +56,4 @@ Vue.js と Axios を用いて、REST API を利用した Web サイト制作の�
 
 ## イベント開催履歴
 
-https://connpass.com/event/115644
+https://leccafe.connpass.com/event/129464/
