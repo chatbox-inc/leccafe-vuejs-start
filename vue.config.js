@@ -18,6 +18,8 @@ module.exports = {
         // template is inferred to be `public/subpage.html`
         // and falls back to `public/index.html` if not found.
         // Output filename is inferred to be `subpage.html`.
-        subpage: './src/subpage/main.js'
+        "scroll" : './src/pages/scroll/main.js',
+        "navigate" : './src/pages/navigate/main.js',
+        "contact/vuelidate" : './src/pages/contact/vuelidate/main.js'
     }
 }
