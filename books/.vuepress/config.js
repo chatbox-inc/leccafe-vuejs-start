@@ -29,6 +29,8 @@ module.exports = {
         sidebar: [
             '/1.Vue.jsの環境構築/',
             '/2.Vue.jsで作る問い合わせフォーム/',
+            '/3.Vue.jsで作るナビゲーション/',
+            '/4.Vue.jsのコンポーネント管理/',
           // {
           //   title: '付録',
           //   collapsable: false,

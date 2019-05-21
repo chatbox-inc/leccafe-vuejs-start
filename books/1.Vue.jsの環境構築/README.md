@@ -135,3 +135,56 @@ https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanh
 「Vue」のタブを確認することができます。
 
 「Vue」タブでは、Vue.js 内部の変数の値などをブラウザで実行しながら確認することができます。
+
+## vue cli の活用
+
+プロジェクトの ルートに配置されている `vue.config.js` を変更することで、
+プロジェクトに様々な設定を加えることができます。
+
+### ページの追加
+
+`vue.config.js` に `pages` セクションを追加することで、
+ページで利用する起動ファイルや、テンプレートとして利用する HTML ファイル、dist フォルダに出力するファイル名などを
+変更する事ができます。
+
+```js
+module.exports = {
+  // ...
+  pages: {
+    index: {
+      entry: 'src/main.js',
+      template: 'public/index.html',
+      filename: 'index.html',
+      title: 'Index Page',
+    },
+  },
+  // ...
+}
+```
+
+- `entry` 必須。 Vue.js のエントリーファイル(main.js) を指定します。
+- `template` テンプレートとして利用する HTMLファイル。 デフォルトは `public/index.html`
+- `filename` `dist` フォルダに出力する際の名前。 省略時には キー名が利用されます。
+- `title` ページのタイトルを指定することが可能です。
+
+::: tip 
+`vue.config.js` で各ページのタイトル要素を変更する場合、
+テンプレート内では `<title><%= htmlWebpackPlugin.options.title %></title>` のようにタイトルタグを記述する必要があります。
+:::
+
+vue cli で作成するプロジェクトで複数のページが必要な場合、`pages` に複数のページ情報を記述して
+複数のページ構成を出力することも可能です。
+
+設定で単純にエントリーファイルを指定するだけなら、以下のように省略形式で記述することも可能です。
+
+```js
+module.exports = {
+  // ...
+  pages: {
+      // ...
+      "event/spring": "src/event/spring.js",
+      "event/summer": "src/event/summer.js",
+  },
+  // ...
+}
+```
