@@ -138,7 +138,7 @@ https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanh
 
 ## vue cli の活用
 
-プロジェクトの ルートに配置されている `vue.config.js` を変更することで、
+プロジェクトの ルートに `vue.config.js` を設置して変更を記述することで、
 プロジェクトに様々な設定を加えることができます。
 
 ### ページの追加
