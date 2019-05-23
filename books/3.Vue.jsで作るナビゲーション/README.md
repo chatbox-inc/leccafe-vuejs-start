@@ -268,6 +268,42 @@ computed プロパティは、 `data` などで定義された値を元に作ら
 </template>
 ```
 
+こちらのオブジェクト表記に関しても複雑になりがちなので、 computed プロパティを利用して以下のように書くのが一般的です。
+
+```vue
+<template>
+    <div>
+        ...
+        <div id="scrollToTop" :class="topBtnClass">
+            トップへ戻る
+        </div>>        
+    </div>
+</template>
+<script >
+export default {
+    data(){
+        return {
+            scrollY: 0
+        }
+    },
+    computed: {
+        topBtnClass(){
+            return {
+                active: scrollY > 500,
+                 'btn-top': true 
+            }
+        }
+    },
+    mounted() {
+        window.addEventListener("scroll",() => {
+            this.scrollY = window.scrollY
+        })
+    }
+}
+</script>
+```
+
+
 ### TRY!! スクロールしたら表示される 「トップへ戻る」ボタン
 
 画面の初期読み込み時には表示されないが、ページをスクロールすると表示される。
