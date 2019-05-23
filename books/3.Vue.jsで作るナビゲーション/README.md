@@ -328,7 +328,7 @@ if 文で判定して document.querySelector の結果が取得できている�
 export default {
     computed:{
       navItemClassTop(){
-        const tar1 = document.querySelector("$concept")
+        const tar1 = document.querySelector("#concept")
         const tar2 = document.querySelector("#services")
         if(this.scrollY > 0 && tar1 && tar2) {
           return {
