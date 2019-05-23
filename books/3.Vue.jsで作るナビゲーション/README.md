@@ -289,7 +289,7 @@ export default {
     computed: {
         topBtnClass(){
             return {
-                active: scrollY > 500,
+                active: this.scrollY > 500,
                  'btn-top': true 
             }
         }
