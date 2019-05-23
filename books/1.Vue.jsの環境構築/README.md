@@ -130,9 +130,13 @@ Chrome ストアからインストールすることができるため、是非�
 
 https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=ja
 
-上記の拡張機能をインストールすると、
+上記の拡張機能をインストールして、エントリーファイルで以下の記述を加えると、
 検証ツール起動時に 「Elements」「Console」「Network」などのタブと並んで
 「Vue」のタブを確認することができます。
+
+```js
+Vue.config.devtools = true
+```
 
 「Vue」タブでは、Vue.js 内部の変数の値などをブラウザで実行しながら確認することができます。
 
