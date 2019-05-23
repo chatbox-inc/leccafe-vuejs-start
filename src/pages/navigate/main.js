@@ -1,7 +1,7 @@
 import Vue from 'vue'
-import Vuelidate from 'vuelidate'
+import VueScrollto from 'vue-scrollto'
 
-Vue.use(Vuelidate)
+Vue.use(VueScrollto)
 
 import App from './App.vue'
 
