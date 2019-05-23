@@ -20,6 +20,6 @@ module.exports = {
         // Output filename is inferred to be `subpage.html`.
         "scroll" : './src/pages/scroll/main.js',
         "navigate" : './src/pages/navigate/main.js',
-        "contact/vuelidate" : './src/pages/contact/vuelidate/main.js'
+        "vuelidate" : './src/pages/vuelidate/main.js'
     }
 }

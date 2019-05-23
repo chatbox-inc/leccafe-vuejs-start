@@ -182,8 +182,8 @@ module.exports = {
   // ...
   pages: {
       // ...
-      "event/spring": "src/event/spring.js",
-      "event/summer": "src/event/summer.js",
+      "event/spring": "src/event/spring/main.js",
+      "event/summer": "src/event/summer/main.js",
   },
   // ...
 }

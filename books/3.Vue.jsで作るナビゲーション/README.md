@@ -209,7 +209,7 @@ export default {
     },
     computed: {
         showTopButton(){
-            return scrollY > 500 && scrollY < 2000
+            return this.scrollY > 500 && this.scrollY < 2000
         }
     },
     mounted() {
