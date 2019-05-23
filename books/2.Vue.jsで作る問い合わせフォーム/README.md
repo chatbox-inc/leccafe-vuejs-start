@@ -7,7 +7,8 @@
 
 `vue-cli` で生成されたプロジェクトの中の src フォルダを確認してみましょう。
 
-`src/main.js` は Vue.js の起動処理です。
+`src/main.js` は Vue.js のエントリーファイルで、
+Vue.js を使って Web ページのプロジェクトを始めるために必要な処理などが記述されています。
 
 ```js
 import Vue from 'vue'
@@ -76,6 +77,34 @@ HTML 内で `{{...}}` の形式で記述された箇所が、Vue.js の処理に
 script 内 `data` で定義した変数の値が、 `\{{ ... }}` の内部に置換される仕組みになっています。
 複数の変数を定義して、動作を確認してみましょう。
 :::
+
+変数のバインディングは、属性にも利用できます。
+
+HTML の属性に変数をバインディングする際には 属性名の前に `:` を利用します。
+
+```vue
+<template>
+  <div id="app">
+    {{message}}
+    <a :href="url"> click me </a>
+  </div>
+</template>
+
+<script>
+export default {
+  data(){
+    return {
+      message : "Hello World",
+      url: "http://google.com"
+    }
+  }
+}
+</script>
+
+<style>
+</style>
+```
+
 
 ### 双方向バインディング
 
