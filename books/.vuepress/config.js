@@ -31,6 +31,7 @@ module.exports = {
             '/2.Vue.jsで作る問い合わせフォーム/',
             '/3.Vue.jsで作るナビゲーション/',
             '/4.Vue.jsのコンポーネント管理/',
+            '/5.Vue.js で作る SPA/',
           // {
           //   title: '付録',
           //   collapsable: false,
