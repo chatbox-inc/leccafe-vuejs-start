@@ -21,6 +21,7 @@ module.exports = {
         "scroll" : './src/pages/scroll/main.js',
         "navigate" : './src/pages/navigate/main.js',
         "vuelidate" : './src/pages/vuelidate/main.js',
-        "spa" : './src/pages/spa/main.js'
+        "spa" : './src/pages/spa/main.js',
+        "api" : './src/pages/api/main.js'
     }
 }

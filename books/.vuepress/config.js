@@ -32,12 +32,15 @@ module.exports = {
             '/3.Vue.jsで作るナビゲーション/',
             '/4.Vue.jsのコンポーネント管理/',
             '/5.Vue.js で作る SPA/',
-          // {
-          //   title: '付録',
-          //   collapsable: false,
-          //   children: [
-          //   ]
-          // },
+          {
+            title: '付録',
+            collapsable: false,
+            children: [
+                '/8.1.Vue.jsのディレクティブ/',
+                '/8.3.axios の活用/',
+                '/8.4.Promise と Async Await/',
+            ]
+          },
         ],
         repo: 'chatbox-inc/leccafe-start-vuejs',
         repoLabel: 'Github',
