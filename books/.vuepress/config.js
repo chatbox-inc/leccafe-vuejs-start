@@ -32,6 +32,7 @@ module.exports = {
             '/3.Vue.jsで作るナビゲーション/',
             '/4.Vue.jsのコンポーネント管理/',
             '/5.Vue.js で作る SPA/',
+            '/6.Vue.js と axios 通信/',
           {
             title: '付録',
             collapsable: false,
